@@ -1,27 +1,18 @@
-// Задание 1: Двумерный массив
-let twoDimArray = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
+// Задание 2: Массив объектов
+let users = [
+    { name: "Иван", age: 25 },
+    { name: "Мария", age: 30 },
+    { name: "Алексей", age: 20 }
 ];
 
-// Вывод содержимого двумерного массива
-console.log("Содержимое двумерного массива:");
-for (let row of twoDimArray) {
-    console.log(row);
+// Вывод значения определенного свойства для каждого объекта
+console.log("Значение свойства 'name' для каждого объекта:");
+for (let user of users) {
+    console.log(user.name);
 }
 
-// Нахождение суммы всех элементов двумерного массива
-let sum = 0;
-for (let row of twoDimArray) {
-    for (let element of row) {
-        sum += element;
-    }
+// Изменение значения определенного свойства каждого объекта
+for (let user of users) {
+    user.age += 1;
 }
-console.log("Сумма всех элементов:", sum);
-
-// Подсчет количества элементов в каждом вложенном массиве
-console.log("Количество элементов в каждом вложенном массиве:");
-for (let row of twoDimArray) {
-    console.log(row.length);
-}
+console.log("Измененные значения свойства 'age' для каждого объекта:", users);
