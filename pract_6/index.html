@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление проектов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Добавление проектов</h1>
+    <form id="projectForm">
+        <label for="projectName">Название проекта:</label>
+        <input type="text" id="projectName" required>
+        <label for="projectDeadline">Срок выполнения:</label>
+        <input type="date" id="projectDeadline" required>
+        <label for="projectDescription">Описание:</label>
+        <textarea id="projectDescription" required></textarea>
+        <label for="projectStatus">Статус:</label>
+        <select id="projectStatus" required>
+            <option value="">Выберите статус</option>
+            <option value="В процессе">В процессе</option>
+            <option value="Завершено">Завершено</option>
+            <option value="Отменено">Отменено</option>
+        </select>
+        <label for="projectImage">Изображение:</label>
+        <input type="file" id="projectImage" required accept="image/*">
+        <button type="submit">Добавить проект</button>
+    </form>
+    <div class="project-cards"></div>
+    <script src="script.js"></script>
+</body>
+</html>
